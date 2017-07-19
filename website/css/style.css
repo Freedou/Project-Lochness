@@ -1,35 +1,71 @@
 /* ---- reset ---- */
 
+
 body {
   margin: 0;
   font:normal 75% Arial, Helvetica, sans-serif;
    background-image: url(party2.jpeg) ;
+   overflow: hidden;
       background-position: center center;
       background-repeat:  no-repeat;
       background-attachment: fixed;
       background-size:  cover;
       background-color: #999;
 }
+footer {
+    /* just for demo */
+    color : white;
+    background-color: black;
+    text-align:center;
+    padding: 5px;
+   /* just for demo */ 
+  
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
 
 .overlay {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   background: rgba(0,0,0,0.3);
   display: block;
   position: absolute;
-  top:50%;
+  top:45%;
   left:50%;
   transform: translate(-50%,-50%);
+  cursor : pointer ;
+}
+h1 strong{
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 0 20px black;
+  text-transform: uppercase;
+}
+
+.overlay:hover {
+  color: #000;
+  box-shadow: 0 22px 22px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
+}
+
+.overlay:focus,
+.overlay:active {
+  box-shadow: 0 17px 17px -15px rgba(42,51,59,0.7), inset 0 -3px rgba(42,51,59,0.4);
 }
 
 .overlay h1 {
   text-align: center;
   padding-top: 100px;
   color: #fff;
-  font-family: inherit;
+  font: helvetica;
+}
+#rdv {
+  padding-top: 0px;
 }
 
 .overlay p{
@@ -37,7 +73,6 @@ body {
   width: 80%;
   margin: 0 auto;
   color: #fff;
-  font-family: inherit;
   margin-bottom: 20px;
 }
 
@@ -48,55 +83,26 @@ body {
 .orange {
   text-decoration: none;
 }
+/* timer */
  p a.orange {
    color: #f27950;
  }
 
-/* ---- particles.js container ---- 
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #b61924;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+
+#timer {
+  font-size: 7em;
+  font-weight: 100;
+  color: white;
+  text-shadow: 0 0 20px ;
+}
+#timer div {
+  display: inline-block;
+margin-left: 25px;
+}
+#timer div span {
+  color: white;
+  font-size: .35em;
+  font-weight: 400;
 }
 
-/* ---- stats.js ---- 
-
-.count-particles{
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
-
-.js-count-particles{
-  font-size: 1.1em;
-}
-
-#stats,
-.count-particles{
-  -webkit-user-select: none;
-}
-
-#stats{
-  border-radius: 3px 3px 0 0;
-  overflow: hidden;
-}
-
-.count-particles{
-  border-radius: 0 0 3px 3px;
-}
