@@ -149,34 +149,35 @@ function calculPrice()
   var number = document.getElementById('number');
   var size = document.getElementById('size');
   var promo = document.getElementById('promo');
-  if(promo="MJA3")
+  var tarif = document.getElementById('tarif');
+  if(promo.value=="MJA3")
   {
-    promo = 0.80;
+    reduc = 0.80;
   }
   else
   {
-    promo = 1;
+    reduc = 1;
   }
-  switch (size) {
-    case 0:
+  switch (size.value) {
+    case "0":
       price = 10;
       break;
 
-    case 1:
+    case "1":
       price = 30;
       break;
 
-    case 2:
+    case "2":
       price = 50;
       break;
 
-    case 3:
+    case "3":
       price = 80;
       break;
 
     default:
-      //alert("Les schmits ton grillé!");
+      alert("Les schmits ton grillé!");
       break;
   }
-  
+  tarif.value = "Total : "+reduc*number.value*price+"€";
 }
