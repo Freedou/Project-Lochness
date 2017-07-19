@@ -131,3 +131,52 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+
+function on()
+{
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("msform").style.display = "block";    
+}
+
+function off()
+{
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("msform").style.display = "none";    
+}
+
+function calculPrice()
+{
+  var number = document.getElementById('number');
+  var size = document.getElementById('size');
+  var promo = document.getElementById('promo');
+  if(promo="MJA3")
+  {
+    promo = 0.80;
+  }
+  else
+  {
+    promo = 1;
+  }
+  switch (size) {
+    case 0:
+      price = 10;
+      break;
+
+    case 1:
+      price = 30;
+      break;
+
+    case 2:
+      price = 50;
+      break;
+
+    case 3:
+      price = 80;
+      break;
+
+    default:
+      //alert("Les schmits ton grillé!");
+      break;
+  }
+  
+}

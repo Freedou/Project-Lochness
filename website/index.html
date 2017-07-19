@@ -1,47 +1,39 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>particles.js</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+	<meta charset="UTF-8">
+	<title>Projet Lochness</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-	<div class="overlay">
-    <h1><strong> PROJET </strong> LOCHNESS RISES </h1> <br> <br> <br>
-    	<div id="timer"></div>
-    
-   <a class="button circle"></a>
-    <br> <br> <br>
-
-<h1 id="rdv"> Réservez votre bouteille</h1>
-    
-  </div>
-  <!-- particles.js container -->
-<div id="particles-js"></div>
-
-
-
-
-
-<!-- stats - count particles -->
-
-
-<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
-  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-<!-- <script src='https://threejs.org/examples/js/libs/stats.min.js'></script> -->
-
-    <script src="js/index.js"></script>
-    <script src="index2.js"></script>
-
-    <footer>   <p>   © 2017 | Tous droits réservés | Mammouth  </p>
- </footer> 
-
-
+	<div id="overlay" onclick="off()"></div>
+	<form id="msform">
+		<fieldset>
+			<h2 class="fs-title">Commandez vos bouteilles!</h2>
+			<h3 class="fs-subtitle">Etape 1</h3>
+			<input id="number" oninput="calculPrice()" type="number" name="number" min="0" placeholder="Nombre(s) de bouteille(s)"/>
+			<select id="size" name="size" oninput="calculPrice()">
+				<option value="0" active>Taille de la boutille : 33cl</option>
+				<option value="1">Taille de la boutille : 50cl</option>
+				<option value="2">Taille de la boutille : 75cl</option>
+				<option value="3">Taille de la boutille : 1L</option>
+			</select>
+			<input id="promo" type="text" name="promo" min="0" placeholder="Code promo" oninput="calculPrice()"/>
+			<textarea id="tarif" disabled></textarea>
+			<input type="button" name="submit" class="next action-button" value="Je reserve!"/>
+		</fieldset>
+	</form>
+	<div class="overlay" onclick="on()">
+		<h1><strong>PROJET</strong> LOCHNESS RISES</h1><br><br><br>
+		<div id="timer"></div>
+		<a class="button circle"></a>
+		<br><br><br>
+		<h1 id="rdv">Réservez votre bouteille</h1>
+	</div>
+	<div id="particles-js"></div>
+	<script src="index2.js"></script>
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+	<script src="js/index.js"></script>
+	<footer><p>© 2017 | Tous droits réservés | Mammouth</p></footer>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* ---- reset ---- */
 
-
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 body {
   margin: 0;
   font:normal 75% Arial, Helvetica, sans-serif;
@@ -53,8 +53,7 @@ h1 strong{
   box-shadow: 0 22px 22px -15px rgba(42,51,59,0.7), inset 0 -5px rgba(42,51,59,0.4);
 }
 
-.overlay:focus,
-.overlay:active {
+.overlay:focus, .overlay:active {
   box-shadow: 0 17px 17px -15px rgba(42,51,59,0.7), inset 0 -3px rgba(42,51,59,0.4);
 }
 
@@ -88,8 +87,6 @@ h1 strong{
    color: #f27950;
  }
 
-
-
 #timer {
   font-size: 7em;
   font-weight: 100;
@@ -106,3 +103,80 @@ margin-left: 25px;
   font-weight: 400;
 }
 
+/* overlay */
+#overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+#msform {
+  display: none;
+  width: 500px;
+  top:45%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  position: absolute;
+  z-index: 11;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  height: 400px;
+  margin: 0 10%;
+  position: relative;
+}
+
+#msform input, #msform textarea, #msform select {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+
+#msform .action-button {
+  width: 100px;
+  background: #27AE60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
